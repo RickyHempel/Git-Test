@@ -11,13 +11,18 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int rnumber = rnd.Next(0,100);
             int guess;
             int tries=1;
             bool loop_control = false;
+           
 
-            Console.WriteLine("I am thinking of a number between 0 and 100! Can you guess the number.\n");
-          
+            Console.WriteLine("I am thinking of a number please enter which two numbers this number should be between! Can you guess the number.\n");
+            Console.WriteLine("\nPlease enter a starting number");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\nPlease enter an ending number");
+            int y = Convert.ToInt32(Console.ReadLine());
+            int rnumber = rnd.Next(x,y);
+            Console.WriteLine(rnumber);
             do {
                 Console.Write("\nPlease enter your guess!\n");
                 guess = Convert.ToInt32(Console.ReadLine());
